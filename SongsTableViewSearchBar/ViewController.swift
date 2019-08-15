@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var songsTableView: UITableView!
     
     let songs = Song.loveSongs
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         songsTableView.delegate = self
@@ -22,10 +22,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewController = DetailsViewController.setUpFromStoryboard() {
+            viewController.song = songs[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.detailTextLabel?.text = songs[indexPath.row].artist
         return cell
     }
-
+    
+    
+    
 }
 
