@@ -69,6 +69,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="5jB-Y0-33Q" id="PTK-zy-1CR"/>
+                        <outlet property="songsTableView" destination="PW1-0a-hm9" id="s4o-cL-UzJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
