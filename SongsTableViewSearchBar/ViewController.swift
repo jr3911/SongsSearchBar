@@ -12,9 +12,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var songsTableView: UITableView!
+    
+    let songs = Song.loveSongs
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        songsTableView.delegate = self
+        songsTableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -25,11 +29,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
+        cell.textLabel?.text = songs[indexPath.row].name
+        cell.detailTextLabel?.text = songs[indexPath.row].artist
+        return cell
     }
 
 }
