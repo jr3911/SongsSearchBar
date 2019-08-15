@@ -85,13 +85,44 @@
                     <view key="view" contentMode="scaleToFill" id="00Z-ss-vJD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6OL-qD-eCV">
+                                <rect key="frame" x="41.5" y="154" width="331" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6OL-qD-eCV" secondAttribute="height" multiplier="11:7" id="NT5-AW-aZV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5z-9D-XPj">
+                                <rect key="frame" x="0.0" y="574" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIE-Q1-3KP">
+                                <rect key="frame" x="0.0" y="495" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6OL-qD-eCV" firstAttribute="centerX" secondItem="fLs-Vh-cUx" secondAttribute="centerX" id="5gZ-GB-gKb"/>
+                            <constraint firstItem="6OL-qD-eCV" firstAttribute="top" secondItem="fLs-Vh-cUx" secondAttribute="top" constant="110" id="8qL-7G-x40"/>
+                            <constraint firstItem="lIE-Q1-3KP" firstAttribute="top" secondItem="6OL-qD-eCV" secondAttribute="bottom" constant="130" id="bcH-04-YmS"/>
+                            <constraint firstItem="6OL-qD-eCV" firstAttribute="width" secondItem="00Z-ss-vJD" secondAttribute="width" multiplier="0.8" id="bmV-Kn-dQv"/>
+                            <constraint firstItem="lIE-Q1-3KP" firstAttribute="centerX" secondItem="fLs-Vh-cUx" secondAttribute="centerX" id="eJQ-5m-tGe"/>
+                            <constraint firstItem="lIE-Q1-3KP" firstAttribute="width" secondItem="00Z-ss-vJD" secondAttribute="width" id="g7I-jb-XFt"/>
+                            <constraint firstItem="S5z-9D-XPj" firstAttribute="top" secondItem="lIE-Q1-3KP" secondAttribute="bottom" constant="58" id="h5W-aw-IB2"/>
+                            <constraint firstItem="S5z-9D-XPj" firstAttribute="width" secondItem="00Z-ss-vJD" secondAttribute="width" id="lDK-Gr-G0g"/>
+                            <constraint firstItem="S5z-9D-XPj" firstAttribute="centerX" secondItem="fLs-Vh-cUx" secondAttribute="centerX" id="sXO-aJ-HSH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fLs-Vh-cUx"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXH-KX-LBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="21"/>
+            <point key="canvasLocation" x="915.94202898550736" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
