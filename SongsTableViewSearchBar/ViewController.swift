@@ -12,24 +12,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var songsTableView: UITableView!
+    @IBOutlet weak var noResultLabel: UILabel!
     
     let songs = Song.loveSongs
     
     var songsArrFilteredBySearch: [Song] {
         get {
             guard let searchString = searchString else {
+                noResultLabel.isHidden = true
                 return songs
             }
             guard searchString != "" else {
+                noResultLabel.isHidden = true
                 return songs
             }
             if let scopeTitles = searchBar.scopeButtonTitles {
                 let currentScope = searchBar.selectedScopeButtonIndex
+                noResultLabel.isHidden = true
                 switch scopeTitles[currentScope] {
                 case "Songs":
-                    return songs.filter { $0.name.lowercased().contains(searchString) }
+                    let results = songs.filter { $0.name.lowercased().contains(searchString) }
+                    if results.count < 1 {
+                        noResultLabel.isHidden = false
+                    }
+                    return results
                 case "Artist":
-                    return songs.filter { $0.artist.lowercased().contains(searchString) }
+                    let results = songs.filter { $0.artist.lowercased().contains(searchString) }
+                    if results.count < 1 {
+                        noResultLabel.isHidden = false
+                    }
+                    return results
                 default:
                     return songs
                 }
@@ -49,6 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         songsTableView.delegate = self
         songsTableView.dataSource = self
         searchBar.delegate = self
+        noResultLabel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         
     }

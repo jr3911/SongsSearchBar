@@ -56,8 +56,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-yo-bKw">
-                                <rect key="frame" x="0.0" y="532" width="414" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-yo-bKw">
+                                <rect key="frame" x="0.0" y="531.5" width="414" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tfl-wg-b3q"/>
                     <connections>
+                        <outlet property="noResultLabel" destination="kmR-yo-bKw" id="iOY-be-Ccv"/>
                         <outlet property="searchBar" destination="5jB-Y0-33Q" id="PTK-zy-1CR"/>
                         <outlet property="songsTableView" destination="PW1-0a-hm9" id="s4o-cL-UzJ"/>
                     </connections>
