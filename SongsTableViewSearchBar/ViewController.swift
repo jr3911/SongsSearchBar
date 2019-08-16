@@ -27,9 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let currentScope = searchBar.selectedScopeButtonIndex
                 switch scopeTitles[currentScope] {
                 case "Songs":
-                    return songs.filter { $0.name.contains(searchString) }
+                    return songs.filter { $0.name.lowercased().contains(searchString) }
                 case "Artist":
-                    return songs.filter { $0.artist.contains(searchString) }
+                    return songs.filter { $0.artist.lowercased().contains(searchString) }
                 default:
                     return songs
                 }
