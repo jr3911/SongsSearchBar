@@ -56,15 +56,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-yo-bKw">
+                                <rect key="frame" x="0.0" y="532" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="PW1-0a-hm9" secondAttribute="trailing" id="045-cb-WQe"/>
+                            <constraint firstItem="kmR-yo-bKw" firstAttribute="centerY" secondItem="PW1-0a-hm9" secondAttribute="centerY" id="6qF-Go-EvU"/>
                             <constraint firstItem="5jB-Y0-33Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FQJ-51-tX0"/>
                             <constraint firstItem="PW1-0a-hm9" firstAttribute="top" secondItem="5jB-Y0-33Q" secondAttribute="bottom" id="VGl-uY-8lH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kmR-yo-bKw" secondAttribute="trailing" id="VOK-KR-3h7"/>
                             <constraint firstAttribute="bottom" secondItem="PW1-0a-hm9" secondAttribute="bottom" id="YkV-K4-2Gw"/>
                             <constraint firstItem="5jB-Y0-33Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eqF-rP-8B2"/>
                             <constraint firstItem="5jB-Y0-33Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hKm-2z-Yw3"/>
+                            <constraint firstItem="kmR-yo-bKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jRk-B4-GXy"/>
                             <constraint firstItem="PW1-0a-hm9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o8k-g8-0wz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
